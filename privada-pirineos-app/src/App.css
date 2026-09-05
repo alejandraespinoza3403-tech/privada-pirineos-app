@@ -1,0 +1,243 @@
+:root {
+  --pino: #2f4a3e;
+  --pino-oscuro: #1f332a;
+  --piedra: #ece6d8;
+  --piedra-clara: #f6f2e8;
+  --ladrillo: #a85a3a;
+  --tinta: #23281f;
+  --gris-niebla: #7c8a80;
+  --linea: #d8d0be;
+  --blanco: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--piedra-clara);
+  color: var(--tinta);
+  font-family: 'Work Sans', sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--pino);
+  color: var(--piedra-clara);
+  padding: 28px 40px 24px;
+}
+
+.app-header__eyebrow {
+  font-size: 13px;
+  color: #c7d6cb;
+  margin: 0 0 4px;
+  letter-spacing: 0.02em;
+}
+
+.app-header h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 38px);
+  margin: 0 0 6px;
+}
+
+.app-header p {
+  margin: 0;
+  color: #d9e3db;
+  font-size: 15px;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  padding: 0 40px;
+  background: var(--piedra-clara);
+  border-bottom: 1px solid var(--linea);
+  overflow-x: auto;
+}
+
+.tab {
+  border: none;
+  background: transparent;
+  padding: 16px 18px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--gris-niebla);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--pino);
+}
+
+.tab.active {
+  color: var(--pino);
+  border-bottom-color: var(--ladrillo);
+}
+
+.content {
+  flex: 1;
+  padding: 32px 40px 60px;
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.panel-title {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--pino-oscuro);
+}
+
+.panel-sub {
+  margin: 0 0 24px;
+  color: var(--gris-niebla);
+  font-size: 14.5px;
+}
+
+.card {
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.form-grid.full {
+  grid-template-columns: 1fr;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--pino-oscuro);
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--linea);
+  border-radius: 3px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  background: var(--piedra-clara);
+}
+
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--ladrillo);
+  outline-offset: 1px;
+}
+
+button.primary {
+  background: var(--pino);
+  color: var(--blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button.primary:hover {
+  background: var(--pino-oscuro);
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid var(--linea);
+  color: var(--tinta);
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  text-align: left;
+  font-size: 12.5px;
+  text-transform: none;
+  color: var(--gris-niebla);
+  font-weight: 500;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--linea);
+}
+
+td {
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--linea);
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag.al-dia { background: #e2ede4; color: var(--pino-oscuro); }
+.tag.adeudo { background: #f4e1d6; color: #8a3f1f; }
+.tag.activo { background: #e2ede4; color: var(--pino-oscuro); }
+.tag.inactivo { background: #ece6de; color: var(--gris-niebla); }
+
+.empty-state {
+  padding: 30px;
+  text-align: center;
+  color: var(--gris-niebla);
+  font-size: 14px;
+}
+
+.saldo-box {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.saldo-box .metric {
+  flex: 1;
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  padding: 18px 20px;
+}
+
+.saldo-box .metric .label {
+  font-size: 12.5px;
+  color: var(--gris-niebla);
+  margin-bottom: 6px;
+}
+
+.saldo-box .metric .value {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  color: var(--pino-oscuro);
+}
