@@ -3,12 +3,16 @@ import Residentes from './components/Residentes.jsx'
 import EstadoCuenta from './components/EstadoCuenta.jsx'
 import Pagos from './components/Pagos.jsx'
 import Accesos from './components/Accesos.jsx'
+import NotificacionesResidentes from './components/NotificacionesResidentes.jsx'
+import ConsultaAccesos from './components/ConsultaAccesos.jsx'
 
 const TABS = [
   { id: 'residentes', label: 'Residentes (HU-1)' },
   { id: 'cuenta', label: 'Estado de cuenta (HU-2)' },
   { id: 'pagos', label: 'Pagos (HU-3)' },
   { id: 'accesos', label: 'Accesos (HU-4)' },
+  { id: 'notificaciones', label: 'Notificaciones (HU-5)' },
+  { id: 'consulta', label: 'Consulta de accesos (HU-6)' },
 ]
 
 export default function App() {
@@ -19,12 +23,13 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="app-header">
-        <p className="app-header__eyebrow">Sprint 1 · Proyecto Privada Pirineos</p>
+        <p className="app-header__eyebrow">Sprints 1 y 3 · Proyecto Privada Pirineos</p>
         <h1>Sistema de pagos y control de accesos</h1>
         <p>
-          Demostración funcional de las cuatro historias de usuario de mayor
+          Demostración funcional de las historias de usuario de mayor
           prioridad del Product Backlog: registro de residentes, estado de
-          cuenta, pagos de mantenimiento y controles de acceso vehicular.
+          cuenta, pagos de mantenimiento, controles de acceso vehicular,
+          notificaciones a residentes y consulta de accesos registrados.
         </p>
       </header>
 
@@ -55,6 +60,8 @@ export default function App() {
             setAccesos={setAccesos}
           />
         )}
+        {tab === 'notificaciones' && <NotificacionesResidentes />}
+        {tab === 'consulta' && <ConsultaAccesos />}
       </main>
     </div>
   )
