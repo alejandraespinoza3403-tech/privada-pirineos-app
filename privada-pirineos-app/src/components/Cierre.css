@@ -1,0 +1,40 @@
+/* Sprint de cierre: HU-7 Reportes de pagos y adeudos, HU-8 Avisos generales */
+.cr-seccion { display: flex; flex-direction: column; gap: 10px; padding-bottom: 12px; }
+.cr-titulo { margin: 0; font-size: 1.15rem; }
+.cr-subtitulo { margin: 0; font-size: 1rem; }
+.cr-form, .cr-filtros { display: flex; flex-direction: column; gap: 8px; }
+.cr-label { display: flex; flex-direction: column; gap: 4px; font-size: 0.8rem; font-weight: 600; }
+.cr-input {
+  width: 100%; box-sizing: border-box; padding: 8px 10px;
+  border: 1px solid #c9c9c9; border-radius: 8px; font: inherit; font-weight: 400;
+}
+.cr-boton {
+  padding: 10px; border: 0; border-radius: 8px; cursor: pointer;
+  background: #1f4e79; color: #fff; font: inherit; font-weight: 600;
+}
+.cr-boton-sec {
+  align-self: flex-start; padding: 6px 10px; border: 1px solid #1f4e79; border-radius: 8px;
+  background: transparent; color: #1f4e79; cursor: pointer; font: inherit; font-size: 0.8rem;
+}
+.cr-error { margin: 0; color: #b3261e; font-size: 0.85rem; }
+.cr-ok { margin: 0; color: #1f6b3a; font-size: 0.85rem; }
+.cr-resumen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.cr-dato {
+  display: flex; flex-direction: column; gap: 2px; padding: 8px;
+  border: 1px solid #e0e0e0; border-radius: 10px; background: #fff; font-size: 0.72rem;
+}
+.cr-dato strong { font-size: 1rem; }
+.cr-dato-verde { background: #e3f3e7; }
+.cr-dato-rojo { background: #fbe6e4; }
+.cr-lista { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.cr-card {
+  display: flex; flex-direction: column; gap: 4px; padding: 10px;
+  border: 1px solid #e0e0e0; border-radius: 10px; background: #fff;
+}
+.cr-card p { margin: 0; font-size: 0.9rem; }
+.cr-fila { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.cr-meta { color: #666; font-size: 0.8rem; }
+.cr-insignia { padding: 2px 8px; border-radius: 999px; font-size: 0.72rem; white-space: nowrap; }
+.cr-verde { background: #d8efdc; color: #1f5a2c; }
+.cr-rojo { background: #f8d7d3; color: #8a1c14; }
+.cr-gris { background: #ececec; color: #444; }
